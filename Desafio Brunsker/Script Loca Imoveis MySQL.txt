@@ -1,0 +1,34 @@
+create database LocaImoveis;
+use locaimoveis;
+
+create table tipoImovel
+(handle int auto_increment primary key,
+tipoImovel varchar(50) not null);
+
+create table imovel
+(handle int auto_increment primary key,
+rua varchar(255) not null,
+numero varchar(50) not null,
+bairro varchar(255) not null,
+cidade varchar(255) not null,
+estado varchar(255) not null,
+cep int not null,
+tipoImovel int not null,
+qtdComodos int not null,
+garagem boolean not null,
+valorCondominio double null,
+valorAluguel double not null,
+metrosQuadrados int not null,
+foreign key (tipoImovel) references tipoImovel (handle)
+);
+
+insert into tipoimovel (tipoImovel)
+values('Casa'),
+('Casa Geminada'),
+('Apartamento'),
+('Sitio'),
+('Kitnet'),
+('Flat'),
+('Sobrado'),
+('Bangalô'),
+('Studio');
