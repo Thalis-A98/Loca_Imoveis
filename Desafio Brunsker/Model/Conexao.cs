@@ -6,7 +6,7 @@ public class ConexaoMySql
 {
     static MySqlConnection conexao = new MySqlConnection()
     {
-        ConnectionString = "server=localhost;User Id=root;database=locaimoveis; password=Thais210190%"
+        ConnectionString = "server=localhost;User Id=nome Usuario;database=locaimoveis; password=Senha Usuario"
     };
 
     public static void ComandoSemRetorno(string query)
