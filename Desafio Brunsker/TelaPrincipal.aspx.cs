@@ -161,7 +161,7 @@ namespace Desafio_Brunsker
 
         protected void btnSalvarEdicao_Click(object sender, EventArgs e)
         {
-            int temGaragem = ckGaragem.Checked ? 1 : 0;
+            int temGaragem = ckEditaGaragem.Checked ? 1 : 0;
 
             string comando = $@"UPDATE imovel SET numero = '{txtEditaNumero.Text}', qtdComodos = '{txtEditaqtdComodos.Text}',
                                 garagem ='{temGaragem}', valorCondominio = '{txtEditaValorCondominio.Text}', 
