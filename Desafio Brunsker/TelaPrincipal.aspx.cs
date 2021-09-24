@@ -149,7 +149,12 @@ namespace Desafio_Brunsker
                 var dadosBanco = ConexaoMySql.ComandoComRetorno(comando);
 
                 lblHandle.Text = idGrid;
-                //txtEditaNumero.Text = dadosBanco.Rows[0]["numero"].ToString();
+                
+                txtEditaValorAluguel.Text = dadosBanco.Rows[0]["valorAluguel"].ToString();
+                txtEditaValorCondominio.Text = dadosBanco.Rows[0]["valorCondominio"].ToString();
+                txtEditaqtdComodos.Text = dadosBanco.Rows[0]["qtdComodos"].ToString();
+                txtEditaMetros.Text = dadosBanco.Rows[0]["metrosQuadrados"].ToString();
+                txtEditaNumero.Text = dadosBanco.Rows[0]["numero"].ToString();
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "ShowPopup();", true);
             }
         }
